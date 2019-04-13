@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_13_165513) do
+ActiveRecord::Schema.define(version: 2019_04_13_171514) do
 
   create_table "projects", options: "ENGINE=MyISAM DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2019_04_13_165513) do
     t.string "client"
     t.string "period"
     t.string "place"
-    t.string "service_name"
+    t.string "service"
     t.date "press_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
