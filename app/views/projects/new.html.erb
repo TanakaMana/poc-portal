@@ -6,7 +6,7 @@
     </div>
     <div class="field">
       <%= f.label :sub_title, "メッセージライン" %><br>
-      <%= f.text_field :sub_title %>
+      <%= f.text_area :sub_title %>
     </div>
     <div class="field">
       <%= f.label :image, "アイキャッチ画像URL" %><br>
@@ -30,7 +30,11 @@
     </div>
     <div class="field">
       <%= f.label :service, "サービス内容" %><br>
-      <%= f.text_field :service %>
+      <%= f.text_area :service %>
+    </div>
+    <div class="field">
+      <%= f.label :reference, "関連情報" %><br>
+      <%= f.text_area :reference %>
     </div>
     <div class="field">
       <%= f.label :category_list, "カテゴリ" %><br>
