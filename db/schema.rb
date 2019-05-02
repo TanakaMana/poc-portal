@@ -12,12 +12,14 @@
 
 ActiveRecord::Schema.define(version: 2019_04_23_163013) do
 
-  create_table "projects", options: "ENGINE=MyISAM DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "projects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.string "sub_title"
     t.string "image"
     t.string "client"
-    t.string "period"
+    t.string "collaborator"
+    t.date "begin_date"
+    t.date "end_date"
     t.string "place"
     t.string "service"
     t.date "press_date"

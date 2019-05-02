@@ -5,7 +5,9 @@ class CreateProjects < ActiveRecord::Migration[5.2]
       t.string	:sub_title
       t.string	:image
       t.string 	:client
-      t.string 	:period
+      t.string  :collaborator
+      t.date 	  :begin_date
+      t.date    :end_date
       t.string	:place
       t.string	:service_name
       t.date	:press_date
