@@ -3,6 +3,30 @@
 	<h3><%= @project.sub_title %></h3>
 	<img src=<%= @project.image %>>
 
+	<h2>カテゴリ</h2>
+	<div class="content tag category">
+		<ul>
+			<% @project.categories.each do |cat| %>
+				<li>
+					<%= link_to cat.name, '' %>
+					<span>(<%= cat.taggings_count %>)</span>
+				</li>
+			<% end %>
+		</ul>
+	</div>
+
+	<h2>要素技術</h2>
+	<div class="content tag technology">
+		<ul>
+			<% @project.technologies.each do |tech| %>
+				<li>
+					<%= link_to tech.name, '' %>
+					<span>(<%= tech.taggings_count %>)</span>
+				</li>
+			<% end %>
+		</ul>
+	</div>
+
 	<h2>基本情報</h2>
 	<div class="content basic-info">
 		<div class="row">
@@ -25,7 +49,7 @@
 			</div>
 			<div class="col-9">
 				<div class='item-info'>
-					<%= @project.period %>
+					<%= @project.begin_date %>~<%= @project.end_date %>
 				</div>
 			</div>
 		</div>
@@ -65,10 +89,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<h2>要素技術</h2>
-	<div class="content technology">
 	</div>
 
 	<h2>考察</h2>
