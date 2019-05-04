@@ -35,16 +35,12 @@
           <%= f.text_field :place, class: "form-control" %>
         </div>
         <div class="form-group">
-          <%= f.label :press_date, "プレスリリース日" %><br>
-          <%= f.date_field :press_date, class: "form-control" %>
-        </div>
-        <div class="form-group">
           <%= f.label :service, "サービス内容" %><br>
-          <%= f.text_area :service, class: "form-control" %>
+          <%= f.text_area :service, class: "form-control high" %>
         </div>
         <div class="form-group">
           <%= f.label :reference, "関連情報" %><br>
-          <%= f.text_area :reference, class: "form-control" %>
+          <%= f.text_area :reference, class: "form-control high" %>
         </div>
         <div class="form-group">
           <%= f.label :category_list, "カテゴリ" %><br>
@@ -53,6 +49,14 @@
         <div class="form-group">
           <%= f.label :technology_list, "要素技術" %><br>
           <%= text_field_tag 'project[technology_list]', @project.technology_list.join(','), "data-role" => "tagsinput", class: "form-control", id: "technology-tags" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :press_date, "プレスリリース日" %><br>
+          <%= f.date_field :press_date, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :press_url, "プレスURL" %><br>
+          <%= f.text_field :press_url, class: "form-control" %>
         </div>
         <div class="actions">
           <%= f.submit :class=>"form-control btn btn-primary" %>
